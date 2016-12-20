@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "\n# This is the user-interface definition of a Shiny web application.\n# You can find out more about building applications with Shiny here:\n#\n# http://shiny.rstudio.com\n#\n\nlibrary(shiny)\n\nshinyUI(fluidPage(\n\n  # Application title\n  titlePanel(\"Old Faithful Geyser Data\"),\n  \n    mainPanel(\n      actionButton(\"save\", \"save\")\n    )\n  \n))\n",
+    "created" : 1482128944834.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "874121858",
+    "id" : "F89A7EAD",
+    "lastKnownWriteTime" : 1482129830,
+    "last_content_update" : 1482129830199,
+    "path" : "~/Desktop/Ashutosh's project/rsqlite/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

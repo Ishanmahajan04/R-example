@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "\n\nlibrary(shiny)\nlibrary(sqldf)\n\n\nshinyServer(function(input, output) {\n\n  \n  if (file.exists(\"Test.sqlite\") == TRUE) file.remove(\"Test.sqlite\")\n  \n  db <- dbConnect(SQLite(), dbname='Test.sqlite')\n  \n    dbSendQuery(conn = db, \"CREATE TABLE School (SchID INTEGER,  Location TEXT, Authority TEXT, SchSize TEXT)\")\n  \n    \n   \n    \n    \n    \n    observeEvent(input$save,{\n      cat(\"Hi.....\") \n      \n      dbGetQuery(conn = db, \n                 \"INSERT INTO School VALUES (1, 'urban', 'state','medium')\")\n      \n      # dbSendQuery(conn = db,\"INSERT INTO School VALUES (2, \"urban1\", \"independent\", \"large\")\")\n      \n      # dbSendQuery(conn = db,'INSERT INTO School VALUES (3, ‘rural’, ‘state’, ‘small’)')\n      \n      dbGetQuery(conn = db, \n                 \"INSERT INTO \n                 School VALUES (2, 'urban1', 'state','medium')\")\n      \n      dbGetQuery(conn = db, \n                 \"INSERT INTO \n                 School VALUES (3, 'urban2', 'state','Large')\")\n    \n      \n      print( cat(dbListTables(db)),      \n             cat(dbListFields(db, 'School'))\n            )\n      \n      print (dbReadTable(db, 'School'))\n      \n       }\n      )\n\n    \n    \n})\n",
+    "created" : 1482128944922.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3583581390",
+    "id" : "1C197B03",
+    "lastKnownWriteTime" : 1482133593,
+    "last_content_update" : 1482133593872,
+    "path" : "~/Desktop/Ashutosh's project/rsqlite/server.R",
+    "project_path" : "server.R",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
